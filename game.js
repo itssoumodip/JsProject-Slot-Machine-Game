@@ -1,10 +1,15 @@
 const prompt = require("prompt-sync")();
 
 const deposite = () => {
-    const depositeAmount = prompt("Enter Your Deposite Amount : ");
-    const numDepostiteAmount = parseFloat(depositeAmount);
-    if (isNaN(numDepostiteAmount) || numDepostiteAmount>=0)
-        console.log("Invalid Deposite amount, Try again !!");
+    while (true) {
+        const depositeAmount = prompt("Enter Your Deposite Amount : ");
+        const numDepostiteAmount = parseFloat(depositeAmount);
+        if (isNaN(numDepostiteAmount) || numDepostiteAmount<=0)
+            console.log("Invalid Deposite amount, Try again !!");
+        else 
+            return numDepostiteAmount;
+    }
 }
 
-deposite();
+const depositeAmount = deposite();
+console.log(depositeAmount)
