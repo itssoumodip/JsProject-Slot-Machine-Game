@@ -72,10 +72,22 @@ const spin = () => {
 };
 
 
-const reels = spin();
-console.log(reels);
+const transpose  = (reels) => {
+    const transRows = [];
+    for (let i=0; i<rows; i++) {
+        transRows.push([]);
+        for (let j=0; j<cols; j++) {
+            transRows[i].push(reels[j][i]);
+        }
+    }
+    return transRows;
+}
+
 // let balance = deposite();
 // const numOfLines = getNumOfLines();
 // const bet = getBet(balance, numOfLines);
+const reels = spin();
+console.log(reels);
+const transposeRows = transpose(reels);
+console.log(transposeRows)
 
-// console.log(bet)
