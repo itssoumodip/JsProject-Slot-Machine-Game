@@ -1,5 +1,23 @@
 const prompt = require("prompt-sync")();
 
+
+const rows = 3;
+const cols = 3;
+
+const symbolsCount = {
+    "A": 2,
+    "B": 4,
+    "C": 6,
+    "D": 8
+};
+const symbolsValues = {
+    "A": 5,
+    "B": 4,
+    "C": 3,
+    "D": 2
+};
+
+
 const deposite = () => {
     while (true) {
         const depositeAmount = prompt("Enter Your Deposite Amount : ");
