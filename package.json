@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/itssoumodip/JsProject-Slot-Machine-Game/issues"
   },
-  "homepage": "https://github.com/itssoumodip/JsProject-Slot-Machine-Game#readme"
+  "homepage": "https://github.com/itssoumodip/JsProject-Slot-Machine-Game#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
 }
