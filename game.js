@@ -9,7 +9,7 @@ const deposite = () => {
         else 
             return numDepostiteAmount;
     }
-}
+};
 
 const getNumOfLines = () => {
     while (true) {
@@ -20,7 +20,20 @@ const getNumOfLines = () => {
         else 
             return numOfLines;
     }
+};
+
+const getBet = () => {
+    while (true) {
+        const bet = prompt("Enter your Bet amount : ");
+        const betAmount = parseFloat(bet);
+        if (isNaN(betAmount) || betAmount<=0 || betAmount>balance)
+            console.log("Invalid Bet amount, Try again !!");
+        else 
+            return betAmount;
+    }
 }
-const depositeAmount = deposite();
+let balance = deposite();
 const numOfLines = getNumOfLines();
-console.log(numOfLines)
+const bet = getBet(balance);
+
+console.log(bet)
